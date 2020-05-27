@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './../../imgs/LogoFullWhite.png';
-import about from "../../imgs/keys.jpg";
+import about from "../../imgs/tree.jpg";
 import contact from "../../imgs/contact.jpg";
 
 const textClasses="imgTxtCenter h1 altFont text-decoration-none text-light";
