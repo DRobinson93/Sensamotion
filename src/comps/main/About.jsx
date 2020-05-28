@@ -6,16 +6,18 @@ class About extends Component {
     render() {
         return (
             <Zoom>
-                <div className="row text-center py-4 text-light">
+                <div className="row py-4">
                     <div class="col-1 col-md-4"></div>
                     <div class="col-10 col-md-4">
                         <img class="w-100 imgOutline" src={about} />
-                        <p class="pt-4">
-                            Need text here
-                        </p>
                     </div>
                     <div className="col-1 col-md-4"></div>
                 </div>
+                <p className="pt-4 text-center py-4 text-light px-4">
+                    {this.props.aboutParagraphs.map((para, i) => {
+                        return (<p>{para}</p>)
+                    })}
+                </p>
             </Zoom>
         )
     }

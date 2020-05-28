@@ -6,6 +6,16 @@ import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 
 class Home extends Component {
+    constructor(props)
+    {
+        super(props);
+        this.state = {
+            numOfDescCharsToShow: 100
+        };
+    }
+    shortDescription(){
+        return this.props.aboutParagraphs[0].substring(0, this.state.numOfDescCharsToShow) + '...';
+    }
     render() {
         return (
             <div>
@@ -20,12 +30,12 @@ class Home extends Component {
                     </div>
                 </Zoom>
                 <Fade left>
-                    <div className="row no-gutters text-dark bg1-lighter shape1">
+                    <a href="/about" className="row no-gutters text-dark bg1-lighter shape1">
                         <div class="col-7 col-md-9 py-4">
                             <h1 class="altFont text-center">About us</h1>
                             <div class="d-none d-sm-block text-center">
                                 <p class="py-4">
-                                    need some text here
+                                    {this.shortDescription()}
                                 </p>
                                 <a class="btn btn-outline-dark" href="about">READ MORE</a>
                             </div>
@@ -33,22 +43,20 @@ class Home extends Component {
                         <div className="col-5 col-md-3">
                             <img className="imgOutline w-100" src={about}/>
                         </div>
-                    </div>
+                    </a>
                 </Fade>
                 <Fade right>
-                    <div className="row no-gutters text-light pb-4">
+                    <a href="/contact" className="row no-gutters text-light pb-4">
                         <div className="col-4 col-md-2">
                             <img className="imgOutline w-100" src={contact}/>
                         </div>
                         <div className="col-8 col-md-10 py-4">
                             <h1 className="altFont text-center">CONTACT US</h1>
                             <div className="d-none d-sm-block text-center">
-                                <p className="py-4">
-                                    need some text here
-                                </p>
+                                <a className="btn btn-outline-light" href="/contact">CONTACT INFO</a>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </Fade>
             </div>
         )

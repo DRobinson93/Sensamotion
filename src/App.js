@@ -4,6 +4,7 @@ import Home from './comps/main/home.jsx';
 import About from './comps/main/About.jsx';
 import Contact from './comps/main/Contact.jsx';
 import SideBarContent from './comps/sub/SideBarContent.jsx';
+import aboutParagraphs from './comps/sub/aboutParagraphs';
 import './App.css';
 import {
     Switch,
@@ -54,9 +55,10 @@ class App extends React.Component {
                     <div class="pt-lg">
                         <Router>
                             <Switch>
-                                <Route path="/about" component={About} />
+                                <Route path="/about"  render={() => <About aboutParagraphs={aboutParagraphs} />} />
                                 <Route path="/contact" component={Contact} />
-                                <Route path="/" component={Home} />
+                                <Route path="/"
+                                       render={() => <Home aboutParagraphs={aboutParagraphs} />}/>
                             </Switch>
                         </Router>
                     </div>
