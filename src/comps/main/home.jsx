@@ -23,7 +23,7 @@ class Home extends Component {
                     <div className="row text-center py-4 text-light">
                         <div class="col-1 col-md-4"></div>
                         <div class="col-10 col-md-4">
-                            <a href="https://song.link/us/i/1516574684" target="_blank" rel="noopener noreferrer">
+                            <a href="https://song.link/us/i/1516574684" class="text-light" target="_blank" rel="noopener noreferrer">
                                 <img alt="single" class="w-100 imgOutline" src={single} />
                                 <div className="h1 font-weight-bold altFont pt-2">New Single!</div>
                             </a>
