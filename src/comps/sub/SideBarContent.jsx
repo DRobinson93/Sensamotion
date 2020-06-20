@@ -9,14 +9,14 @@ class SideBarContent extends Component {
         return (
             <div class="sideBarLinks">
                 <a className="SideBarImgParent" href="/">
-                    <img className="SideBarImg p-4" src={logo}/>
+                    <img alt="logo" className="SideBarImg p-4" src={logo}/>
                 </a>
                 <a className="SideBarImgParent" href="about">
-                    <img className="SideBarImg halfOpacity" src={about}/>
+                    <img alt="about" className="SideBarImg halfOpacity" src={about}/>
                     <span className={textClasses}>About</span>
                 </a>
                 <a className="SideBarImgParent" href="contact">
-                    <img className="SideBarImg halfOpacity" src={contact}/>
+                    <img alt="contact" className="SideBarImg halfOpacity" src={contact}/>
                     <span className={textClasses}>Contact</span>
                 </a>
             </div>

@@ -23,8 +23,10 @@ class Home extends Component {
                     <div className="row text-center py-4 text-light">
                         <div class="col-1 col-md-4"></div>
                         <div class="col-10 col-md-4">
-                            <img class="w-100 imgOutline" src={single} />
-                            <div className="h1 font-weight-bold altFont pt-2">New Single!</div>
+                            <a href="https://song.link/us/i/1516574684" target="_blank" rel="noopener noreferrer">
+                                <img alt="single" class="w-100 imgOutline" src={single} />
+                                <div className="h1 font-weight-bold altFont pt-2">New Single!</div>
+                            </a>
                         </div>
                         <div className="col-1 col-md-4"></div>
                     </div>
@@ -41,14 +43,14 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className="col-5 col-md-3">
-                            <img className="imgOutline w-100" src={about}/>
+                            <img alt="about" className="imgOutline w-100" src={about}/>
                         </div>
                     </a>
                 </Fade>
                 <Fade right>
                     <a href="/contact" className="row no-gutters text-light pb-4">
                         <div className="col-4 col-md-2">
-                            <img className="imgOutline w-100" src={contact}/>
+                            <img alt="contact" className="imgOutline w-100" src={contact}/>
                         </div>
                         <div className="col-8 col-md-10 py-4">
                             <h1 className="altFont text-center">CONTACT US</h1>

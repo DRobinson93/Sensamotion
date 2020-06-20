@@ -9,7 +9,7 @@ class About extends Component {
                 <div className="row py-4">
                     <div class="col-1 col-md-4"></div>
                     <div class="col-10 col-md-4">
-                        <img class="w-100 imgOutline" src={about} />
+                        <img alt="about" class="w-100 imgOutline" src={about} />
                     </div>
                     <div className="col-1 col-md-4"></div>
                 </div>
