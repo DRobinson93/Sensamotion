@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import single from './../../imgs/responsive/truthNDisc.jpg';
+import singleMobile from './../../imgs/responsive/truthNDisc-mobile.jpg';
 import about from './../../imgs/responsive/about.jpg';
 import contact from './../../imgs/responsive/TreeFav.png';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import LazyLoad from 'react-lazyload';
+import { Picture } from 'react-responsive-picture';
 
 class Home extends Component {
     constructor(props)
@@ -29,7 +31,19 @@ class Home extends Component {
                     <div class="col-10 col-md-4">
                         <a href="https://song.link/us/i/1516574684" class="text-light" target="_blank" rel="noopener noreferrer">
                             <Zoom>
-                                <img alt="single" class="w-100 imgOutline" src={single} onLoad={this.setMainImgLoaded} />
+                                <Picture
+                                    alt="single" class="w-100 imgOutline" onLoad={this.setMainImgLoaded}
+                                    sources = {[
+                                        {
+                                            srcSet: singleMobile,
+                                            media: "(max-width: 768px)",
+                                        },
+                                        {
+                                            srcSet: single,
+                                            media: "(min-width: 768px)"
+                                        }
+                                    ]}
+                                />
                                 <div className="h1 font-weight-bold altFont pt-2">New Single!</div>
                             </Zoom>
                         </a>
