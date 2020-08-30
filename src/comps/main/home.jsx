@@ -26,11 +26,11 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div className="row text-center py-4 text-light">
-                    <div class="col-1 col-md-4"></div>
-                    <div class="col-10 col-md-4">
-                        <a href="https://song.link/us/i/1516574684" class="text-light" target="_blank" rel="noopener noreferrer">
-                            <Zoom>
+                <Zoom>
+                    <div className="row text-center py-4 text-light">
+                        <div class="col-1 col-md-4"></div>
+                        <div class="col-10 col-md-4">
+                            <a href="https://song.link/us/i/1516574684" class="text-light" target="_blank" rel="noopener noreferrer">
                                 <Picture
                                     alt="single" class="w-100 imgOutline" onLoad={this.setMainImgLoaded}
                                     sources = {[
@@ -45,11 +45,11 @@ class Home extends Component {
                                     ]}
                                 />
                                 <div className="h1 font-weight-bold altFont pt-2">New Single!</div>
-                            </Zoom>
-                        </a>
+                            </a>
+                        </div>
+                        <div className="col-1 col-md-4"></div>
                     </div>
-                    <div className="col-1 col-md-4"></div>
-                </div>
+                </Zoom>
                 <Fade left when={this.state.mainImgLoaded}>
                     <a href="/about" className="row no-gutters text-dark bg1-lighter shape1">
                         <div class="col-7 col-md-9 py-4">
