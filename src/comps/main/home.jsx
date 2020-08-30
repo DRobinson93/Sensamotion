@@ -11,11 +11,15 @@ class Home extends Component {
     {
         super(props);
         this.state = {
-            numOfDescCharsToShow: 100
+            numOfDescCharsToShow: 100,
+            mainImgLoaded : false
         };
     }
     shortDescription(){
         return this.props.aboutParagraphs[0].substring(0, this.state.numOfDescCharsToShow) + '...';
+    }
+    setMainImgLoaded = () => {
+        this.setState({'mainImgLoaded':true});
     }
     render() {
         return (
@@ -25,14 +29,14 @@ class Home extends Component {
                     <div class="col-10 col-md-4">
                         <a href="https://song.link/us/i/1516574684" class="text-light" target="_blank" rel="noopener noreferrer">
                             <Zoom>
-                                <img alt="single" class="w-100 imgOutline" src={single} />
+                                <img alt="single" class="w-100 imgOutline" src={single} onLoad={this.setMainImgLoaded} />
                                 <div className="h1 font-weight-bold altFont pt-2">New Single!</div>
                             </Zoom>
                         </a>
                     </div>
                     <div className="col-1 col-md-4"></div>
                 </div>
-                <Fade left>
+                <Fade left when={this.state.mainImgLoaded}>
                     <a href="/about" className="row no-gutters text-dark bg1-lighter shape1">
                         <div class="col-7 col-md-9 py-4">
                             <h1 class="altFont text-center">About us</h1>
