@@ -4,6 +4,7 @@ import about from './../../imgs/responsive/about.jpg';
 import contact from './../../imgs/responsive/TreeFav.png';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
+import LazyLoad from 'react-lazyload';
 
 class Home extends Component {
     constructor(props)
@@ -19,18 +20,18 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <Zoom>
-                    <div className="row text-center py-4 text-light">
-                        <div class="col-1 col-md-4"></div>
-                        <div class="col-10 col-md-4">
-                            <a href="https://song.link/us/i/1516574684" class="text-light" target="_blank" rel="noopener noreferrer">
+                <div className="row text-center py-4 text-light">
+                    <div class="col-1 col-md-4"></div>
+                    <div class="col-10 col-md-4">
+                        <a href="https://song.link/us/i/1516574684" class="text-light" target="_blank" rel="noopener noreferrer">
+                            <Zoom>
                                 <img alt="single" class="w-100 imgOutline" src={single} />
                                 <div className="h1 font-weight-bold altFont pt-2">New Single!</div>
-                            </a>
-                        </div>
-                        <div className="col-1 col-md-4"></div>
+                            </Zoom>
+                        </a>
                     </div>
-                </Zoom>
+                    <div className="col-1 col-md-4"></div>
+                </div>
                 <Fade left>
                     <a href="/about" className="row no-gutters text-dark bg1-lighter shape1">
                         <div class="col-7 col-md-9 py-4">
@@ -43,14 +44,18 @@ class Home extends Component {
                             </div>
                         </div>
                         <div className="col-5 col-md-3">
-                            <img alt="about" className="imgOutline w-100" src={about}/>
+                            <LazyLoad>
+                                <img alt="about" className="imgOutline w-100" src={about}/>
+                            </LazyLoad>
                         </div>
                     </a>
                 </Fade>
-                <Fade right>
+                <LazyLoad>
                     <a href="/contact" className="row no-gutters text-light pb-4">
                         <div className="col-4 col-md-2">
-                            <img alt="contact" className="imgOutline w-100" src={contact}/>
+                            <LazyLoad>
+                                <img alt="contact" className="imgOutline w-100" src={contact}/>
+                            </LazyLoad>
                         </div>
                         <div className="col-8 col-md-10 py-4">
                             <h1 className="altFont text-center">CONTACT US</h1>
@@ -59,7 +64,7 @@ class Home extends Component {
                             </div>
                         </div>
                     </a>
-                </Fade>
+                </LazyLoad>
             </div>
         )
     }
