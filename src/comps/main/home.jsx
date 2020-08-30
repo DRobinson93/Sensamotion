@@ -44,7 +44,9 @@ class Home extends Component {
                                         }
                                     ]}
                                 />
-                                <div className="h1 font-weight-bold altFont pt-2">New Single!</div>
+                                <Fade right when={this.state.mainImgLoaded}>
+                                    <div className="h1 font-weight-bold altFont pt-2">New Single!</div>
+                                </Fade>
                             </a>
                         </div>
                         <div className="col-1 col-md-4"></div>
@@ -69,19 +71,21 @@ class Home extends Component {
                     </a>
                 </Fade>
                 <LazyLoad>
-                    <a href="/contact" className="row no-gutters text-light pb-4">
-                        <div className="col-4 col-md-2">
-                            <LazyLoad>
-                                <img alt="contact" className="imgOutline w-100" src={contact}/>
-                            </LazyLoad>
-                        </div>
-                        <div className="col-8 col-md-10 py-4">
-                            <h1 className="altFont text-center">CONTACT US</h1>
-                            <div className="d-none d-sm-block text-center">
-                                <a className="btn btn-outline-light" href="/contact">CONTACT INFO</a>
+                    <Fade right when={this.state.mainImgLoaded}>
+                        <a href="/contact" className="row no-gutters text-light pb-4">
+                            <div className="col-4 col-md-2">
+                                <LazyLoad>
+                                    <img alt="contact" className="imgOutline w-100" src={contact}/>
+                                </LazyLoad>
                             </div>
-                        </div>
-                    </a>
+                            <div className="col-8 col-md-10 py-4">
+                                <h1 className="altFont text-center">CONTACT US</h1>
+                                <div className="d-none d-sm-block text-center">
+                                    <a className="btn btn-outline-light" href="/contact">CONTACT INFO</a>
+                                </div>
+                            </div>
+                        </a>
+                    </Fade>
                 </LazyLoad>
             </div>
         )
