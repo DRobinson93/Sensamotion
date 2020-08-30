@@ -13,8 +13,8 @@ import {
 
 import RubberBand from 'react-reveal/Jump';
 
-import fullLogo from './imgs/SensamotionBlackText.png';
-import smLogo from './imgs/SmLogo.png';
+import fullLogo from './imgs/responsive/SensamotionBlackText.png';
+import smLogo from './imgs/responsive/SmLogo.png';
 
 class App extends React.Component {
     constructor(props)

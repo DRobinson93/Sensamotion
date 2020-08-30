@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import single from './../../imgs/truthNDisc.jpg';
-import about from './../../imgs/about.jpg';
-import contact from './../../imgs/TreeFav.png';
+import single from './../../imgs/responsive/truthNDisc.jpg';
+import about from './../../imgs/responsive/about.jpg';
+import contact from './../../imgs/responsive/TreeFav.png';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 

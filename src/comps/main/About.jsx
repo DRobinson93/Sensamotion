@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import about from './../../imgs/about.jpg';
+import about from './../../imgs/responsive/about-lg.jpg';
 import Zoom from "react-reveal/Zoom";
 
 class About extends Component {
